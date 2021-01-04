@@ -5,7 +5,7 @@ const router = express.Router();
 const queryController = require('../controllers/queryController');
 
 router.get(
-  'execute-query-untracked',
+  '/execute-query-untracked/',
   queryController.executeQueryUntracked,
   (req, res) => {
     res.status(200).json(res.locals);
@@ -13,7 +13,7 @@ router.get(
 );
 
 router.get(
-  'execute-query-tracked',
+  '/execute-query-tracked/',
   queryController.executeQueryTracked,
   (req, res) => {
     res.status(200).json(res.locals);
@@ -21,7 +21,7 @@ router.get(
 );
 
 router.get(
-  'generate-dummy-data',
+  '/generate-dummy-data/',
   queryController.generateDummyData,
   (req, res) => {
     res.status(200).json(res.locals);
